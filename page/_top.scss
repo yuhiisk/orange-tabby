@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+// ==========================================================================
+//   Style of page specific `Top`
+// ==========================================================================
+
+$map-top: sprite-map('top/*.png', $spacing: 2px);
+%top-item {
+	@include sprites($map-top, common, true);
+}
+
+.mod-main {
+	position: relative;
+	overflow: hidden;
+	height: 330px;
+	background: url(#{$imgPath}bg_top_01.png) no-repeat 50% 0 #ececec;
+	@include background-size(600px 331px);
+	@include single-transition(all, .5s, ease);
+}
+.mod-main-title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 96px;
+	height: 330px;
+	margin-left: -48px;
+
+	span {
+		@extend %top-item;
+		@include sprites($map-top, pro, false);
+		margin: 90px auto 0;
+	}
+}
+.mod-main-nav {
+	$width: 66px;
+
+	li {
+		position: absolute;
+		top: 0;
+		left: -$width;
+		// -webkit-box-sizing: border-box;
+		// box-sizing: border-box;
+		width: $width;
+		height: 100%;
+		border-right: 1px solid #dcdcdc;
+		background-color: rgba(255, 255, 255, .4);
+		@include box-shadow(1px 1px 1px rgba(236, 236, 236, .4) inset, -1px -1px 1px rgba(236, 236, 236, .4) inset);
+		@include single-transition(all, .5s, ease);
+		text-align: center;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding-top: 45px;
+		}
+		span {
+			@extend %top-item;
+			margin: 0 auto;
+		}
+	}
+
+	li:nth-child(1) {
+		&.is-active { left: 0; }
+		span { @include sprites($map-top, nav_1, false); }
+	}
+	li:nth-child(2) {
+		&.is-active { left: $width; }
+		span { @include sprites($map-top, nav_2, false); }
+	}
+	li:nth-child(3) {
+		&.is-active { left: $width * 2; }
+		span { @include sprites($map-top, nav_3, false); }
+	}
+}

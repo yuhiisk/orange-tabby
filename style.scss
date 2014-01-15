@@ -1,0 +1,45 @@
+@charset "utf-8";
+//
+// style.scss
+// @comment rules: https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP
+//
+
+// Import Compass
+// ==========================================================================
+@import "compass";
+
+
+// Core files
+// ==========================================================================
+// configuration file
+@import "core/config-compass";
+@import "core/config";
+// original mixins and functions
+@import "core/mixin";
+@import "core/func";
+// normalize and original reset
+@import "core/reset/normalize";
+@import "core/reset/reset";
+
+
+// Component files
+// ==========================================================================
+// modules
+@import "module/utilities";
+@import "module/common-module";
+@import "module/clearfix";
+
+// layouts
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/boxes";
+
+// states
+@import "state/state";
+
+
+// Page files
+// ==========================================================================
+@import "page/top";
+

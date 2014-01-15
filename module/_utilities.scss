@@ -1,0 +1,23 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+
+// Overlay(Modal)
+//@include simple-overlay();
+
+// Global sprite
+$map-icons: sprite-map('sprite/*.png', $spacing: 2px);
+%icon-item {
+	@include sprites($map-icons, common, true);
+}
+
+.icon-fb {
+	@extend %icon-item;
+	@include sprites($map-icons, facebook, false);
+	display: inline-block;
+}
+.icon-tw {
+	@extend %icon-item;
+	@include sprites($map-icons, twitter, false);
+	display: inline-block;
+}

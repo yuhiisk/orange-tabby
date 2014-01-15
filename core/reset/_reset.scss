@@ -1,0 +1,118 @@
+@charset "utf-8";
+// ==========================================================================
+// Base reset
+// ==========================================================================
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+/* Resetting default margin and padding
+   ========================================================================== */
+// TODO
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+object, iframe, pre, code, p, blockquote,
+form, fieldset, legend,
+table, th, td, caption, tbody, tfoot, thead,
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, audio, video, canvas {
+	margin: 0;
+	padding: 0;
+}
+
+/* HTML, Body, Anchor
+   ========================================================================== */
+html {}
+
+body {
+	min-width: $wrapperWidth;
+	background-color: $bgColor;
+	color: $fontColor;
+	font-size: #{$baseFontSize}px;
+	@if $legacy-support-for-ie {
+		*font-size: small;
+	}
+	font-family: $baseFont;
+	line-height: 1.5;
+	word-break: break-all;
+}
+/* Font-size (base: #{$baseFontSize}px) */
+
+a { color: $linkColor; text-decoration: none; outline: 0; }
+a:link, a:visited { text-decoration: none; outline: 0; }
+a:hover, a:active { color: $linkColorHover; text-decoration: none; }
+
+
+/* Heading, Paragraph
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+
+p {
+	margin-bottom: $baseMargin;
+}
+
+/* List
+   ========================================================================== */
+li { list-style: none; }
+
+
+/* Table
+   ========================================================================== */
+table {
+	font-size: inherit;
+	font-family: inherit;
+}
+caption, th, td {
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+
+/* Form
+   ========================================================================== */
+fieldset { border: none; }
+input, textarea, select, label {
+	vertical-align: middle;
+}
+input[type="text"], input[type="email"], select {
+	font-size: 1rem;
+}
+textarea { overflow: auto; }
+legend { display: none; }
+
+
+/* Other
+   ========================================================================== */
+img {
+	vertical-align: bottom;
+	@include disabled-select-drag;
+}
+object {
+	vertical-align: middle;
+	outline: none;
+}
+audio,
+canvas,
+video {
+	vertical-align: middle;
+}
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+abbr {
+	border: none;
+	font-variant: normal;
+}
+q:before, q:after { content: ''; }
+address, caption, cite, code, dfn, var {
+	font-weight: normal;
+	font-style: normal;
+}
+code, pre { font-family: monospace; }
+
+

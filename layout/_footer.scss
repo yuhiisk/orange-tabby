@@ -1,0 +1,60 @@
+@charset "utf-8";
+// ==========================================================================
+// Footer
+// ==========================================================================
+.global-footer {
+	padding: 18px 10px 10px;
+	background-color: #363636;
+	color: #acacac;
+	text-align: center;
+
+	a {
+		color: #acacac;
+	}
+
+	.mod-list {
+		margin-bottom: 5px;
+		font-size: 12px;
+
+		li {
+			display: inline-block;
+			position: relative;
+			margin-bottom: 10px;
+
+			&:first-child {
+				margin-right: 5px;
+				padding-right: 7px;
+
+				&:after {
+					@extend %icon-item;
+					@include sprites($map-icons, line, false);
+					content: "";
+					position: absolute;
+					top: 2px;
+					right: 0;
+				}
+			}
+		}
+
+	}
+	.mod-sns {
+		margin-bottom: 23px;
+		font-size: 12px;
+
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		[class^="icon-"] {
+			margin-right: 3px;
+			vertical-align: -0.3em;
+		}
+	}
+	.copyright {
+		margin: 0;
+	}
+}
+

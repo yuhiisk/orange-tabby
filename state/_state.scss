@@ -1,0 +1,44 @@
+// ==========================================================================
+// State of elements
+// example:
+//     ".is-example"
+//     ".has-example"
+//     ".error-example"
+// ==========================================================================
+/* display */
+.is-hidden {
+	display: none;
+}
+
+.is-force-hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/* position */
+.is-fixed {
+	position: fixed;
+}
+.is-absolute {
+	position: absolute;
+}
+
+/* css hover */
+.is-hover {
+	@include opacity(.7);
+}
+
+/* display */
+.is-transparent {
+	@extend .is-transition;
+	@include opacity(0);
+}
+
+.is-opacity {
+	@include opacity(1);
+}
+
+/* animation */
+.is-transition {
+	@include single-transition(all, .5s, ease);
+}

@@ -1,0 +1,31 @@
+// ==========================================================================
+// Common modules
+// example: ".mod-example", ".mod-example .title"
+// ==========================================================================
+
+// listview
+.mod-listview {
+	font-size: 14px;
+}
+.mod-listview-item {
+	border-top: 1px solid #d3d3d3;
+	a {
+		display: block;
+		position: relative;
+		padding: 20px;
+		line-height: 1.2;
+
+		&:after {
+			content: "";
+			@extend %icon-item;
+			@include sprites($map-icons, arrow, false);
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+	}
+}
+
+.mod-comment-pc {
+	font-size: 10px;
+}
