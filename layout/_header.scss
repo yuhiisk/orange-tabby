@@ -1,36 +1,12 @@
-@charset "utf-8";
-
 // ==========================================================================
 // Header
 // ==========================================================================
 .global-header {
-	padding: 9px 10px;
-	background-color: #363636;
-	@extend .clearfix;
-	
-	h1 {
-		float: left;
-		margin-top: 5px;
-	}
 
-	.logo-header {
-		@extend %icon-item;
-		@include sprites($map-icons, logo, false);
-		display: inline-block;
-		margin-right: 11px;
-	}
+    h1 {
+        font-size: fz(20);
+        margin: 20px 0;
+    }
 
-	.info-header {
-		@extend %icon-item;
-		@include sprites($map-icons, sitename, false);
-		display: inline-block;
-	}
-
-	.btn-entry {
-		float: right;
-		a {
-			@extend %icon-item;
-			@include sprites($map-icons, entry, false);
-		}
-	}
 }
+

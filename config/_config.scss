@@ -3,20 +3,26 @@
 // Global config file
 // ==========================================================================
 
-// Assets file path
+// Paths
 // ==========================================================================
-// image file path
-$imgPath: "../img/";
+$http-path: "http://";
+$css-dir: "css";
+$image-dir: "img";
+$fonts-dir: "fonts";
+$hierarchy-of-img-from-css: '../'; 
 
-
-// Support devices
+// Reset type
 // ==========================================================================
-$isRetina: true; // for sprite
+// "html5doctor", "ericmeyer", "yui", "normalize", "original"
+$resetCSS: "original";
 
-
-// Margin
+// For Retina
 // ==========================================================================
-$baseMargin: 1em;
+$isRetina: false;
+
+// Margin(paragraph)
+// ==========================================================================
+$baseMargin: 0;
 
 
 // Color
@@ -29,7 +35,7 @@ $bgColor: #fff !default;
 // $accentColor: #e73562;
 
 // font
-$fontColor: #333 !default;
+$fontColor: #000 !default;
 // sub font color
 // $subFontColor1: #C8C8C8;
 // $subFontColor2: #A5A5A5;
@@ -37,10 +43,10 @@ $fontColor: #333 !default;
 $accentFontColor: #ffffff !default;
 
 // links
-$linkColor: #343434 !default;
-$linkColorHover: #3b5998 !default;
-$linkColorVisited: #343434 !default;
-$linkColorActive: #343434 !default;
+$linkColor: #0072ff !default;
+$linkColorHover: #0072ff !default;
+$linkColorVisited: #0072ff !default;
+$linkColorActive: #0072ff !default;
 
 // border
 // $bdColor1: rgba(28, 76, 184, .5);
@@ -51,19 +57,20 @@ $linkColorActive: #343434 !default;
 // Font
 // ==========================================================================
 // base font
-$baseFont: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif !default;
+$baseFont: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
 $baseFontIE: 'ＭＳ Ｐゴシック', sans-serif !default;
+$YuFont: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
 // base font size
-$baseFontSize: 12 !default;
+$baseFontSize: 14 !default;
 
 
 // Window
 // ==========================================================================
-$wrapperWidth: 320px;
+$wrapperWidth: 0;
 
 // Media queries
 // ==========================================================================
-$breakPoint: 640px;
+$breakpoint: 640px;
 
 // Debug
 // ==========================================================================
