@@ -1,39 +1,40 @@
 // ==========================================================================
 //
 //   style.scss
-//
 //   @author Youhei Isokawa
+//
 // ==========================================================================
+
 // configuration file
 @import "config";
 
-// Core files
-// ==========================================================================
-// original mixins and functions
-@import "mixin/all", "function/import";
-// reset
-// "original", "yui", "html5doctor", "ericmeyer", "normalize", "sanitize"
-@import "reset/original";
-
-// Component files
-// ==========================================================================
 // modules
 @import
-    "module/sprite-map",
-    "module/common-modules",
-    "module/clearfix";
+    "modules/mixins",
+    "modules/functions",
+    "modules/sprite-map",
+    "modules/container",
+    "modules/clearfix";
 
-// layouts
+// partials
 @import
-    "layout/base",
-    "layout/header",
-    "layout/footer";
+    // reset type => "normalize", "sanitize", "original", "yui", "html5doctor", "ericmeyer"
+    "partials/reset/original",
+    "partials/typography",
+    // structures
+    "partials/base",
+    "partials/header",
+    "partials/footer",
+    // states
+    "partials/state";
 
-// states
-@import "state/state";
+// pages
+@import
+    "pages/index";
 
-// Page files
+
+// print
 // ==========================================================================
-@import
-    "page/index";
-
+@media print {
+    @import "partials/print";
+}

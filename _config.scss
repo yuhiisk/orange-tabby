@@ -4,7 +4,7 @@
 
 // Namespace
 // ==========================================================================
-$ns: ();
+$orange-tabby: ();
 
 // Paths
 // ==========================================================================
@@ -14,23 +14,14 @@ $image-dir: "img";
 $fonts-dir: "fonts";
 $hierarchy-of-img-from-css: '../';
 
-// For Retina
+// Colors
 // ==========================================================================
-$is-retina: false;
-
-// Global margin(paragraph)
-// ==========================================================================
-$base-margin: 0;
-
-// Color
-// ==========================================================================
-// background
-$bg-color: #fff !default;
-// sub
-$sub-color: #eee !default;
+// main color
+$main-color: #fff !default;
 // accent
 $accent-color: #0ff !default;
-
+// background
+$bg-color: #fff !default;
 // font
 $font-color: #000 !default;
 // sub font color
@@ -43,21 +34,25 @@ $link-color-active: #0072ff !default;
 // border
 $border-color: #000 !default;
 
-// Font
+// Fonts
 // ==========================================================================
-// base font
-$base-font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif !default;
-$yu-font: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
-// base font size
+$sans-serif: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif;
+$serif:      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$yu-gothic:  "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+$yu-mincho:  "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 $base-font-size: 14;
 
-// Window
+// Sizing
 // ==========================================================================
 $wrapper-width: 0;
 
+// Global margin(paragraph)
+// ==========================================================================
+$base-margin: 0;
+
 // Media queries
 // ==========================================================================
-$breakpoint: 640px;
+$breakpoint: 740px;
 
 // Mixin variables
 // ==========================================================================

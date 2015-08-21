@@ -2,19 +2,19 @@
 // ==========================================================================
 // disabled user-event
 @mixin disabled-select() {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 @mixin disabled-drag() {
-	-webkit-user-drag: none;
-	-moz-user-drag: none;
-	-ms-user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
 }
 @mixin disabled-select-drag() {
-	@include disabled-select();
-	@include disabled-drag();
+    @include disabled-select();
+    @include disabled-drag();
 }
 @mixin reversal($scale: 1) {
     transform: scale(-$scale, $scale);
