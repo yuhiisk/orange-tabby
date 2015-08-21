@@ -1,28 +1,22 @@
-@charset "utf-8";
-
 // ==========================================================================
-//   index
+//
+//   style.scss
+//
+//   @author Youhei Isokawa
 // ==========================================================================
+// configuration file
+@import "config";
 
 // Core files
 // ==========================================================================
-// configuration file
-@import
-    "config/config-compass",
-    "config/config";
 // original mixins and functions
-@import
-    "mixin/all",
-    "function/func";
-// reset css
-$resetCSS: "normalize";
-@import "reset/reset";
-$resetCSS: "original";
-@import "reset/reset";
+@import "mixin/all", "function/import";
+// reset
+// "original", "yui", "html5doctor", "ericmeyer", "normalize", "sanitize"
+@import "reset/original";
 
 // Component files
 // ==========================================================================
-
 // modules
 @import
     "module/sprite-map",
@@ -42,3 +36,4 @@ $resetCSS: "original";
 // ==========================================================================
 @import
     "page/index";
+

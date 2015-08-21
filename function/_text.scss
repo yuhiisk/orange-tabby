@@ -4,10 +4,11 @@
 
 //
 // Font size specified relative
-// (!require: _config.scss - $baseFontSize: {number})
+// (!require: _config.scss - $base-font-size: {number})
+//
+// $base-font-size: 14;
 // ==========================================================================
-$baseFontSize: 14;
-$showFontSizeDebug: null;
+$show-font-size-debug: null;
 
 @function initFontSize($base) {
     $fontlist: (); $prepend: (); $append: ();
@@ -23,16 +24,16 @@ $showFontSizeDebug: null;
         $append: append($append, $per);
     }
     $fontlist: join($prepend, $append);
-    @if $showFontSizeDebug { @debug $fontlist; }
+    @if $show-font-size-debug { @debug $fontlist; }
     @return $fontlist;
 }
-$fontSizeList: initFontSize($baseFontSize);
+$fontSizeList: initFontSize($base-font-size);
 
 // getter
 //
 // usage:
 // .hoge {
-//      font-size: fz(10); => font-size: ( 10 / $baseFontSize )%;
+//      font-size: fz(10); => font-size: ( 10 / $base-font-size )%;
 //
 //      .foo {
 //          font-size: fz(15, 10);  => font-size: ( 15 / 10 )%;
@@ -50,14 +51,14 @@ $fontSizeList: initFontSize($baseFontSize);
     @if type-of($force) == 'number' {
         $val: ceil(percentage($size / $force));
 
-        @if $showFontSizeDebug { @debug $val; }
+        @if $show-font-size-debug { @debug $val; }
         @return $val;
     } @else if $force != null and type-of($force) != 'number' {
         @warn '#{$force} is not number.';
     }
     $val: nth($fontSizeList, $size - 7);
 
-    @if $showFontSizeDebug { @debug $val; }
+    @if $show-font-size-debug { @debug $val; }
     @return $val;
 }
 
@@ -69,6 +70,7 @@ $fontSizeList: initFontSize($baseFontSize);
 // ==========================================================================
 @function returnEaseTypeToCubicBezier($type) {
     $easingValue: "";
+
     @if $type == "linear" {
         $easingValue: "0.250, 0.250, 0.750, 0.750";
     }

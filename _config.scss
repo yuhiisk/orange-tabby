@@ -1,7 +1,10 @@
-@charset "utf-8";
 // ==========================================================================
 // Global config file
 // ==========================================================================
+
+// Namespace
+// ==========================================================================
+$ns: ();
 
 // Paths
 // ==========================================================================
@@ -9,69 +12,57 @@ $http-path: "http://";
 $css-dir: "css";
 $image-dir: "img";
 $fonts-dir: "fonts";
-$hierarchy-of-img-from-css: '../'; 
-
-// Reset type
-// ==========================================================================
-// "html5doctor", "ericmeyer", "yui", "normalize", "original"
-$resetCSS: "original";
+$hierarchy-of-img-from-css: '../';
 
 // For Retina
 // ==========================================================================
-$isRetina: false;
+$is-retina: false;
 
-// Margin(paragraph)
+// Global margin(paragraph)
 // ==========================================================================
-$baseMargin: 0;
-
+$base-margin: 0;
 
 // Color
 // ==========================================================================
 // background
-$bgColor: #fff !default;
+$bg-color: #fff !default;
 // sub
-// $subColor: #eee;
+$sub-color: #eee !default;
 // accent
-// $accentColor: #e73562;
+$accent-color: #0ff !default;
 
 // font
-$fontColor: #000 !default;
+$font-color: #000 !default;
 // sub font color
-// $subFontColor1: #C8C8C8;
-// $subFontColor2: #A5A5A5;
-// accent font color
-$accentFontColor: #ffffff !default;
-
+$sub-font-color: #CCC !default;
 // links
-$linkColor: #0072ff !default;
-$linkColorHover: #0072ff !default;
-$linkColorVisited: #0072ff !default;
-$linkColorActive: #0072ff !default;
-
+$link-color: #0072ff !default;
+$link-color-hover: #0072ff !default;
+$link-color-visited: #0072ff !default;
+$link-color-active: #0072ff !default;
 // border
-// $bdColor1: rgba(28, 76, 184, .5);
-// $bdColor2: #4F4F4F;
-// $bdColor3: #787878;
-
+$border-color: #000 !default;
 
 // Font
 // ==========================================================================
 // base font
-$baseFont: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
-$baseFontIE: 'ＭＳ Ｐゴシック', sans-serif !default;
-$YuFont: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
+$base-font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif !default;
+$yu-font: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !default;
 // base font size
-$baseFontSize: 14 !default;
-
+$base-font-size: 14;
 
 // Window
 // ==========================================================================
-$wrapperWidth: 0;
+$wrapper-width: 0;
 
 // Media queries
 // ==========================================================================
 $breakpoint: 640px;
 
-// Debug
+// Mixin variables
 // ==========================================================================
-$showFontSizeDebug: null;
+// テキストを隠す方向
+$hide-text-direction: right;
+// Browser support (old compass)
+$legacy-support-for-ie: false;
+$legacy-support-for-ie8: false;

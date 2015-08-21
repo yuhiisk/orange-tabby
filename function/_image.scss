@@ -27,15 +27,17 @@
 }
 
 //
-// image-url
+// get-url
 // @return {string} file path
 // ==========================================================================
-@function image-url($path, $option: null, $only-path: null) {
+@function get-url($path, $option: null, $only-path: null) {
+
     $url: '';
-    @if $option == 'local' or $option == null {
-        $url: local-path($path);
-    } @else if $option == 'relative' {
+
+    @if $option == 'relative' or $option == null {
         $url: relative-path($path);
+    } @else if $option == 'local' {
+        $url: local-path($path);
     } @else if $option == 'absolute' {
         $url: absolute-path($path);
     }
@@ -52,5 +54,5 @@
 // @return {string} file path
 // ==========================================================================
 @function base64($path) {
-    @return url64('assets/' + $image-dir + '/' + $path);
+    @return url64($image-dir + '/' + $path);
 }
