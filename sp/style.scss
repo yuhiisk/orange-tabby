@@ -10,23 +10,23 @@
 
 // modules
 @import
-    "modules/mixins",
-    "modules/functions",
-    "modules/sprite-map",
-    "modules/container",
-    "modules/clearfix";
+    "../modules/mixins",
+    "../modules/functions",
+    "../modules/sprite-map",
+    "../modules/container",
+    "../modules/clearfix";
 
 // partials
 @import
     // reset type => "normalize", "sanitize", "original", "yui", "html5doctor", "ericmeyer"
-    "partials/reset/original",
-    "partials/typography",
+    "../partials/reset/original",
+    "../partials/typography",
     // structures
-    "partials/base",
-    "partials/header",
-    "partials/footer",
+    "../partials/base",
+    "../partials/header",
+    "../partials/footer",
     // states
-    "partials/state";
+    "../partials/state";
 
 // pages
 @import
@@ -36,5 +36,10 @@
 // print
 // ==========================================================================
 @media print {
-    @import "partials/print";
+    @import "../partials/print";
 }
+
+.sp {
+    content: "sp style";
+}
+
