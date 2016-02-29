@@ -17,7 +17,7 @@
 
 // for Desktop
 @mixin mq-pc ($breakpoint: $breakpoint) {
-    @media not all and (min-width: ($breakpoint + 1px)) {
+    @media all and (min-width: ($breakpoint + 1px)) {
         @content;
     }
 }
@@ -29,10 +29,4 @@
     }
 }
 
-// for Landscape (Smartphone)
-@mixin mq-orientation ($breakpoint: 375px) {
-    @media only screen and (min-width: $breakpoint) {
-        @content;
-    }
-}
 
